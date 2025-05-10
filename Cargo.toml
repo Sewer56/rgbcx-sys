@@ -9,8 +9,18 @@ license = "MIT OR Unlicense"
 keywords = []
 categories = []
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+# Exclude compiled artifacts
+include = [
+    "**/*.rs",
+    "src/**",
+    "Cargo.toml",
+    "bc7enc_rdo/rgbcx.h",
+    "bc7enc_rdo/rgbcx_table4.h",
+    "bc7enc_rdo/rgbcx_table4_small.h",
+    "bc7enc_rdo/rgbcx.cpp",
+]
 
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [dependencies]
 
 [build-dependencies]
@@ -21,12 +31,12 @@ cc = "1"
 # Install g++ for cross compilation
 pre-build = [
     "dpkg --add-architecture $CROSS_DEB_ARCH",
-    "apt update && apt install -y g++:$CROSS_DEB_ARCH gcc:$CROSS_DEB_ARCH g++-9:$CROSS_DEB_ARCH gcc-9:$CROSS_DEB_ARCH cpp:$CROSS_DEB_ARCH binutils-aarch64-linux-gnu:$CROSS_DEB_ARCH"
+    "apt update && apt install -y g++ gcc"
 ]
 
 [workspace.metadata.cross.target.armv7-unknown-linux-gnueabihf]
 # Install g++ for cross compilation
 pre-build = [
     "dpkg --add-architecture $CROSS_DEB_ARCH",
-    "apt update && apt install -y g++:$CROSS_DEB_ARCH gcc:$CROSS_DEB_ARCH g++-9:$CROSS_DEB_ARCH gcc-9:$CROSS_DEB_ARCH cpp:$CROSS_DEB_ARCH binutils-arm-linux-gnueabihf:$CROSS_DEB_ARCH"
+    "apt update && apt install -y g++ gcc"
 ]
