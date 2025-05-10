@@ -38,6 +38,7 @@ fn main() {
 
     cc::Build::new()
         .cpp(true)
+        .std("c++20")
         .include("bc7enc_rdo/")
         .files(&["bc7enc_rdo/rgbcx.cpp"])
         .compile("bc7enc");
