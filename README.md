@@ -1,4 +1,4 @@
-# bc7enc-sys
+# rgbcx-sys
 
 Rust FFI bindings to the rgbcx (BC1-BC5 decoder/encoder) from Rich Geldreich's bc7enc_rdo project.
 This provides access to BC1-BC5 texture compression and decompression functionality through the underlying C++ library.
