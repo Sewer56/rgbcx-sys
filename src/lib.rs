@@ -1,11 +1,10 @@
-#[allow(warnings)]
-pub mod ffi {
-    include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
-}
+#![doc = include_str!(concat!("../", std::env!("CARGO_PKG_README")))]
+#![allow(warnings)]
+include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
 
 #[cfg(test)]
 mod tests {
-    use crate::ffi::root::rgbcx;    
+    use crate::root::rgbcx;    
 
     #[test]
     fn it_works() {
