@@ -1,0 +1,18 @@
+[package]
+name = "rgbcx-sys"
+version = "0.1.0"
+authors = ["Sewer56 <admin@sewer56.dev>"]
+edition = "2024"
+description = "Rust bindings to the rgbcx (BC1-BC5 encoder) from Rich Geldreich's bc7enc_rdo project."
+repository = "https://github.com/Sewer56/rgbcx-sys"
+license = "MIT OR Unlicense"
+keywords = []
+categories = []
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[build-dependencies]
+bindgen = "0.71.1"
+cc = "1"
