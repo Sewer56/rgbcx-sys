@@ -1,6 +1,6 @@
 [package]
 name = "rgbcx-sys"
-version = "1.1.3+0.1.0"
+version = "1.1.3+0.2.0"
 authors = ["Sewer56 <admin@sewer56.dev>"]
 edition = "2024"
 description = "Rust bindings to the rgbcx (BC1-BC5 decoder/encoder) from Rich Geldreich's bc7enc_rdo project."

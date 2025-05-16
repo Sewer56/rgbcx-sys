@@ -24,6 +24,7 @@ fn main() {
         .derive_ord(true)
         .impl_debug(true)
         .impl_partialeq(true)
+        .use_core()
         .default_enum_style(bindgen::EnumVariation::Rust {
             non_exhaustive: false,
         })
